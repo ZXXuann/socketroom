@@ -25,6 +25,7 @@ public class SocketServer {
                 System.out.println("有新的客户端加入，ip:"+ip+",端口:"+port);
                 //保存客户端会话
                 String clientName=ip+":"+socket.getPort();
+                SESSION.put(clientName,socket);
                 new Thread(()->{
                     while(true){
                         try {
@@ -40,6 +41,7 @@ public class SocketServer {
                             //转发消息给所有的客户端
                             for(Map.Entry<String,Socket> entry:SESSION.entrySet()){
                                 String key=entry.getKey();
+                                System.out.println(key);
                                 //获取客户端socket
                                 Socket value=entry.getValue();
                                 //获取客户端socket的输出流
@@ -47,10 +49,14 @@ public class SocketServer {
                                 //将字节流转换为字符流
                                 OutputStreamWriter outputStreamWriter=new OutputStreamWriter(outputStream,"utf8");
                                 //创建socket输出的缓存区
+                                PrintWriter pw=new PrintWriter(outputStream);
                                 BufferedWriter bufferedWriter=new BufferedWriter(outputStreamWriter);
-                                bufferedWriter.write(key+":"+message);
-                                //清空缓冲区
+                                //注意换行符
+                                pw.println(socket.getPort()+":"+message);
+                                bufferedWriter.write(socket.getPort()+":"+message+"\n");
                                 bufferedWriter.flush();
+                                //清空缓冲区
+                                pw.flush();
                             }
 
                         } catch (IOException e) {

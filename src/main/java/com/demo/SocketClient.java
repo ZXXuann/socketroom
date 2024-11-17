@@ -12,8 +12,9 @@ public class SocketClient {
             socket=new Socket("127.0.0.1", 8080);
             //获取socket的输出流
             OutputStream os=socket.getOutputStream();
-            OutputStreamWriter osw=new OutputStreamWriter(os);
-            BufferedWriter bw=new BufferedWriter(osw);
+//            OutputStreamWriter osw=new OutputStreamWriter(os);
+//            BufferedWriter bw=new BufferedWriter(osw);
+            PrintWriter pw=new PrintWriter(os);
             System.out.println("请输入内容");
 
             //创建一个发送数据的线程
@@ -22,14 +23,10 @@ public class SocketClient {
                     Scanner sc=new Scanner(System.in);
                     //读取文字
                     String input=sc.nextLine();
-                    try {
-                        //输出文字
-                        bw.write(input);
-                        bw.flush();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                        break;
-                    }
+                    //输出文字
+                    pw.println(input);
+                    pw.flush();
+
 
                 }
             }).start();
