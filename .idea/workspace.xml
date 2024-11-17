@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06ebe01f-e19d-4815-932b-0b9277ae105d" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/SocketClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/SocketServer.java" afterDir="false" />
+    <list default="true" id="06ebe01f-e19d-4815-932b-0b9277ae105d" name="Changes" comment="feat:更新了Socket客户端以及服务端">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -70,7 +71,7 @@
       <workItem from="1731759544804" duration="530000" />
       <workItem from="1731760519194" duration="318000" />
       <workItem from="1731761917412" duration="653000" />
-      <workItem from="1731811519614" duration="4407000" />
+      <workItem from="1731811519614" duration="4611000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -96,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731812809114</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat:更新了Socket客户端以及服务端">
+      <option name="closed" value="true" />
+      <created>1731816407194</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731816407194</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +124,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="feat:更新了Socket客户端以及服务端" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:更新了Socket客户端以及服务端" />
   </component>
 </project>
